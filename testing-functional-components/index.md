@@ -8,6 +8,17 @@ jordan@kobee.io
 
 ---
 
+# Overview
+
+- integration tests or unit tests?
+- writing bad tests
+- writing better tests
+- writing good tests
+- test doubles
+-
+
+---
+
 ![left](assets/dog.jpeg)
 
 # Being a JavaScript programmer is like being a dog
@@ -52,6 +63,60 @@ Encapsulated, simple, incredibly easy to unit test
 - Don’t know?
 
 ---
+
+# Writing bad tests
+
+Until about 6 months ago, my tests looked like this:
+
+CODE SAMPLE
+
+using class instance
+
+---
+
+# Hooks are released
+
+And then hooks were released, and the whole world was like hooked (funny picture)
+
+And my tests broke
+
+This is when I realized intuitively why Kent C Dodds is so keen to say do not test implementation.
+
+---
+
+# Writing better tests
+
+CODE SAMPLE
+
+Going from class based to function based
+
+---
+
+# Writing good tests
+
+- Test user facing behavior (i.e. text, style that is visible to the user)
+- Create test doubles that allow for global failure (2 examples)
+- Write unit tests to test general use cases
+- Write integration tests to test specific use cases
+
+---
+
+# Test doubles
+
+## Terminology
+
+Stubs: Test doubles that fake logic to allow tests to run but don't care about the result
+
+Mocks: Mock implementation of specific objects or methods to test expectatations via behavior
+
+---
+
+Stub libraries
+
+
+
+
+
 
 React hooks have exploded onto the scene, making functional components increasingly attractive. But how do you test them? Unlike class-based components, functional components have no accessible instance. It's a blessing in disguise that forces us to test what's user facing. The next time you change implementation, your tests should pass.
 
@@ -210,11 +275,17 @@ A good example of the right way to test is a refetch. Instead of checking that r
 
 Kent C. Dodds
 
-[^1] https://kentcdodds.com
+Be self depracating!!!!
+Say things like I'm very dumb a lot
 
+# References
+
+https://kentcdodds.com
 https://kentcdodds.com/blog/avoid-nesting-when-youre-testing
 https://kentcdodds.com/blog/testing-implementation-details
 https://codingitwrong.com/2018/12/03/why-you-should-sometimes-test-implementation-details.html
 https://kentcdodds.com/blog/how-to-know-what-to-test
 https://kentcdodds.com/blog/aha-testing
 https://github.com/testing-library/react-testing-librar://github.com/testing-library/react-testing-library
+https://martinfowler.com/articles/mocksArentStubs.html
+https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub/17810004#17810004
