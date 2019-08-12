@@ -66,11 +66,44 @@ Encapsulated, simple, incredibly easy to unit test
 
 # Writing bad tests
 
-Until about 6 months ago, my tests looked like this:
+```javascript
+import ListItem from './ListItem'
 
-CODE SAMPLE
+// ...
 
-using class instance
+class List extends React.Component {
+  todoCreate (e) { ... }
+  handleChange (e, i) { ... }
+  handleRemove (i) { ... }
+
+  render () {
+    return (
+      <div>
+        <button onClick={this.todoCreate}>Add a todo</button>
+
+        <ul>
+          {this.state.todos.map((todo, i) => {
+            return <ListItem
+                handleChange={(e) => this.handleChange(e, i)}
+                handleRemove={() => this.handleRemove(i)}
+                key={i}
+                todo={todo}
+              />
+          })}
+        </ul>
+      </div>
+    )
+  }
+}
+
+export default List
+```
+
+---
+
+# Writing slightly better tests
+
+Use mount
 
 ---
 
@@ -95,7 +128,7 @@ Going from class based to function based
 # Writing good tests
 
 - Test user facing behavior (i.e. text, style that is visible to the user)
-- Create test doubles that allow for global failure (2 examples)
+- Create test doubles and methods that allow for global failure (router, isValidRoute)
 - Write unit tests to test general use cases
 - Write integration tests to test specific use cases
 
