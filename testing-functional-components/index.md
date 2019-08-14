@@ -443,6 +443,7 @@ kobee.io
 
 # Tools and Resources
 
+https://github.com/jordantomax/talks/tree/master/testing-functional-components
 https://github.com/stalniy/bdd-lazy-var
 https://github.com/rosiejs/rosie
 https://github.com/marak/Faker.js/
