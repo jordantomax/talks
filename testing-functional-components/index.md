@@ -433,20 +433,19 @@ This gives us confidence in making decisions like replacing a library.
 
 ---
 
-# Thank you
-
-@jordantomax
-jordan@kobee.io
-kobee.io
-
----
-
 # Tools and Resources
 
 https://github.com/jordantomax/talks/tree/master/testing-functional-components
 https://github.com/stalniy/bdd-lazy-var
 https://github.com/rosiejs/rosie
 https://github.com/marak/Faker.js/
-https://github.com/testing-library/react-testing-library
-https://kentcdodds.com/blog/testing-implementation-details
+https://github.com/testing-library/react-testing-library https://kentcdodds.com/blog/testing-implementation-details
 https://martinfowler.com/bliki/ContractTest.html
+
+---
+
+# Thank you
+
+@jordantomax
+jordan@kobee.io
+kobee.io
