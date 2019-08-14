@@ -158,9 +158,7 @@ function List () {
 
 ---
 
-# :(
-
-TODO charlie brown is sad image
+![inline](assets/eeyore-too-good-to-be-true.gif)
 
 ---
 [.code-highlight: all]
@@ -185,15 +183,32 @@ describe('List', () => {
 
 ---
 
-# :) ?
-
-TODO excited image
-
 ![inline](assets/function-component-test-pass.png)
 
 ---
 
-# No, still :(
+![inline](assets/hmm-spongebob.gif)
+
+---
+
+# No
+
+![inline](assets/eeyore-too-good-to-be-true.gif)
+
+---
+[.code-highlight: all]
+[.code-highlight: 2]
+[.code-highlight: 3]
+[.code-highlight: 4]
+[.build-lists: false]
+
+```javascript
+it('adds a todo when clicking add', async () => {
+  const wrapper = shallow(<List />)
+  await wrapper.find('button').props().onClick()
+  expect(wrapper.find('ListItem').length).toEqual(1)
+})
+```
 
 - Shallow render not explicit in what is not rendered
 - Calling a method from props does not mirror user behavior
@@ -203,9 +218,9 @@ TODO excited image
 
 # What to do?
 
-- Mock explicitly instead of shallow rendering
-- Trigger an actual click event instead of calling onClick directly
-- Look at the actual DOM instead of developer defined names
+- Fully render, mock explicitly instead of shallow rendering
+- Trigger real click event instead of calling onClick directly
+- Look at the actual DOM, not developer defined names
 
 ---
 
@@ -242,15 +257,17 @@ describe('List', () => {
 
 ---
 
-# Much better!
+# Not bad
+
+![inline](assets/star-trek-data-not-bad.gif)
 
 ---
 
-# Let's also test specifics of the ListItem
-
-Clicking the name toggles editing
+# Let's also ListItem which requires prop data
 
 ---
+[.code-highlight: all]
+[.code-highlight: 7-10]
 
 ```javascript
 import ListItem from './ListItem'
@@ -282,6 +299,8 @@ Wherever there is structured data, there should be factories
 ---
 
 # Define the data structure
+
+Using generated data makes your tests more meaningful
 
 ```javascript
 function randomFromArray (array) {
@@ -316,6 +335,8 @@ describe('ListItem', () => {
 ```
 
 ---
+
+# What about integration tests?
 
 ![inline](assets/tweet-mostly-functional.png)
 
@@ -412,13 +433,19 @@ This gives us confidence in making decisions like replacing a library.
 
 ---
 
-Outro
+# Thank you
 
+@jordantomax
+jordan@kobee.io
+kobee.io
 
-# References
+---
 
+# Tools and Resources
+
+https://github.com/stalniy/bdd-lazy-var
+https://github.com/rosiejs/rosie
+https://github.com/marak/Faker.js/
+https://github.com/testing-library/react-testing-library
 https://kentcdodds.com/blog/testing-implementation-details
-https://testing-library.com
-https://martinfowler.com/articles/mocksArentStubs.html
 https://martinfowler.com/bliki/ContractTest.html
-https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub/17810004#17810004
