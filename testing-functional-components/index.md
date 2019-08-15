@@ -66,6 +66,8 @@ Simple, flexible, encapsulated
 
 # Let's write some bad tests!
 
+First, let's look at the application that we're testing
+
 ---
 
 ```javascript
@@ -154,7 +156,7 @@ function List () {
 
 ---
 
-![inline](assets/function-component-test-failure.png)
+![inline](assets/function-component-test-failure-small.png)
 
 ---
 
@@ -387,6 +389,8 @@ export default withRouter(List)
 
 ---
 [.code-highlight: all]
+[.code-highlight: 1-3]
+[.code-highlight: 5-8]
 [.code-highlight: 13]
 
 # The test
