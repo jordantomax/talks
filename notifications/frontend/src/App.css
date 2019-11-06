@@ -1,0 +1,59 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  padding: 4rem;
+  border: 0.2rem solid #e5e5e5;
+  width: 50rem;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+}
+
+#app > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  border: 0;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+.permission.granted {
+  color: limegreen;
+}
+
+.permission.default,
+.permission.denied {
+  color: red;
+}

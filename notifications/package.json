@@ -1,0 +1,9 @@
+{
+  "standard": {
+    "globals": [
+      "self",
+      "fetch",
+      "atob"
+    ]
+  }
+}
