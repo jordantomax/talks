@@ -245,27 +245,21 @@ self.addEventListener('push', function (e) {
 ---
 [.build-lists: true]
 
-# Things to consider
-
-- Save push endpoint in a real database
-- Code defensively for serviceWorker failures
-- Authentication with push server requires specific keys, but don't hard code your keys!
-
----
-
-# Browser support
-
-We need both service worker support and push notification support! This is a progressive web **ENHANCEMENT**, know your audience.
-
-![inline](assets/browser-support.png)
-
----
-
 # To summarize
 
 1. Local notifications
 2. Service workers
 3. Subscriptions
+
+---
+[.build-lists: true]
+
+# Things to consider
+
+- This is a progressive web **ENHANCEMENT**. Know your audience.
+- Save push endpoint in a real database
+- Code defensively for serviceWorker failures
+- Authentication with push server requires specific keys, but don't hard code your keys!
 
 ---
 
