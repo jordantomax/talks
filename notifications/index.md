@@ -1,4 +1,4 @@
-# Notifications API
+# How the Notifications API Works
 
 Jordan Cooperman
 
@@ -7,7 +7,7 @@ Email: **jordancooperman@gmail.com**
 
 ---
 
-# The talk, the code
+# The Talk, the Code
 
 https://github.com/jordantomax/talks/tree/master/notifications
 
@@ -205,9 +205,7 @@ self.addEventListener('push', function (e) {
 const dummyDb = {}
 
 app.post('/save-subscription', async (req, res) => {
-  const subscription = req.body
-  await saveToDatabase(subscription)
-  dummyDb.subscription = subscription
+  dummyDb.subscription = req.body
   res.json({ message: 'success' })
 })
 
@@ -251,7 +249,7 @@ self.addEventListener('push', function (e) {
 
 - Save push endpoint in a real database
 - Code defensively for serviceWorker failures
-- Don't hardcode your VAPID keys!
+- Authentication with push server requires specific keys, but don't hard code your keys!
 
 ---
 
